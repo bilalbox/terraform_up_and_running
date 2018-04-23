@@ -1,1 +1,1 @@
-This is a place to store all the lab exercises completed while working through Yevgeniy Brikman's [__Terraform Up & Running__](https://terraformupandrunning.com).
+This is a place to store all the lab exercises completed while working through Yevgeniy Brikman's [Terraform Up & Running](https://terraformupandrunning.com).
