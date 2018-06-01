@@ -33,3 +33,19 @@ cat <<EOF > /etc/ipsec.secrets
 EOF
 
 /etc/init.d/ipsec restart
+
+conn vpc1
+        type=tunnel
+        compress=no
+        keyexchange=ikev1
+        ike=aes128-sha1-modp1024!
+        auth=esp
+        authby=psk
+        left=54.241.138.199 
+        leftid=54.241.138.199 
+        leftsubnet=169.254.254.6/32,10.2.0.0/16
+        rightsubnet=169.254.254.5/32,10.4.0.0/16
+        right=87.238.85.44
+        rightid=87.238.85.44
+        esp=aes128-sha1-modp1024!
+        auto=route

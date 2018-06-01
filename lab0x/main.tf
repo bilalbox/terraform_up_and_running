@@ -18,6 +18,7 @@ data "template_file" "user_data_vpn" {
   vars {
     local_subnet = "${aws_subnet.sn04.cidr_block}"
     remote_subnet = "${aws_subnet.sn02.cidr_block}"
+    local_ipv4_priv = "${aws_network_interface.eni03.private_ips[0]}"
     local_ipv4_pub = "${aws_eip.eip02.public_ip}"
     remote_ipv4_pub = "${aws_vpn_connection.vpnc01.tunnel1_address}"
     vpn_psk = "${aws_vpn_connection.vpnc01.tunnel1_preshared_key}"
